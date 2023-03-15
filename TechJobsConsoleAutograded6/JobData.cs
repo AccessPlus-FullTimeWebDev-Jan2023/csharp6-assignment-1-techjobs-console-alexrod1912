@@ -63,9 +63,9 @@ namespace TechJobsConsoleAutograded6
                     if (x.Contains(value))
                     {
                         jobs4.Add(all);
-                        Console.WriteLine("HIYA " + x);
+                        //Console.WriteLine("HIYA " + x);
                     }
-                    Console.WriteLine(all1.Key + ": " + all1.Value);
+                    //Console.WriteLine(all1.Key + ": " + all1.Value);
                 }
             }
             return jobs4;
