@@ -60,11 +60,14 @@ namespace TechJobsConsoleAutograded6
                     // What is their search term?
                     Console.WriteLine(Environment.NewLine + "Search term: ");
                     string searchTerm = Console.ReadLine();
+                    searchTerm = searchTerm.ToLower();
 
                     // Fetch results
                     if (columnChoice.Equals("all"))
                     {
-                        Console.WriteLine("Search all fields not yet implemented.");
+                        List<Dictionary<string, string>> searchResults = JobData.FindByValue(searchTerm);
+                        PrintJobs(searchResults);
+                        //Console.WriteLine("Search all fields not yet implemented.");
                     }
                     else
                     {
@@ -117,7 +120,7 @@ namespace TechJobsConsoleAutograded6
                 {
                     choiceIdx = int.Parse(input);
                 }
-
+             
                 if (choiceIdx < 0 || choiceIdx >= choiceKeys.Length)
                 {
                     Console.WriteLine("Invalid choices. Try again.");
@@ -135,7 +138,16 @@ namespace TechJobsConsoleAutograded6
         // TODO: complete the PrintJobs method.
         public void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
-            Console.WriteLine("PrintJobs is not implemented yet");
+            foreach (var item in someJobs)
+            {
+                Console.WriteLine($"\n *****");
+
+                foreach (KeyValuePair<string, string> item1 in item)
+                {
+                    Console.WriteLine($" {item1.Key} : {item1.Value} ");
+                }
+                Console.WriteLine($" *****");
+            }
         }
     }
 }
