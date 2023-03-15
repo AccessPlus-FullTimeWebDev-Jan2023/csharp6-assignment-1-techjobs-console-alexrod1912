@@ -120,7 +120,7 @@ namespace TechJobsConsoleAutograded6
                 {
                     choiceIdx = int.Parse(input);
                 }
-
+             
                 if (choiceIdx < 0 || choiceIdx >= choiceKeys.Length)
                 {
                     Console.WriteLine("Invalid choices. Try again.");

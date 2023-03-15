@@ -89,6 +89,7 @@ namespace TechJobsConsoleAutograded6
             {
                 //Console.WriteLine(" WE ARE LOOKING AT ROW" + row.Keys);
                 string aValue = row[column];
+                aValue = aValue.ToLower();
                 //Console.WriteLine("HIIIIIIII"+row[column]);
 
                 //TODO: Make search case-insensitive
