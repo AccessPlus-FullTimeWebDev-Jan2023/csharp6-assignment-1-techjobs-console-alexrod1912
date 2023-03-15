@@ -60,13 +60,14 @@ namespace TechJobsConsoleAutograded6
                     // What is their search term?
                     Console.WriteLine(Environment.NewLine + "Search term: ");
                     string searchTerm = Console.ReadLine();
+                    searchTerm = searchTerm.ToLower();
 
                     // Fetch results
                     if (columnChoice.Equals("all"))
                     {
                         List<Dictionary<string, string>> searchResults = JobData.FindByValue(searchTerm);
                         PrintJobs(searchResults);
-                        Console.WriteLine("Search all fields not yet implemented.");
+                        //Console.WriteLine("Search all fields not yet implemented.");
                     }
                     else
                     {
